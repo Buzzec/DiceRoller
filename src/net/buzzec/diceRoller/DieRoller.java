@@ -1,18 +1,19 @@
 package net.buzzec.diceRoller;
 
-import com.buzzec.exceptions.*;
-import com.buzzec.loggger.*;
 import net.buzzec.diceRoller.exceptions.InvalidNumDice;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Random;
 
 import static java.lang.Math.abs;
 
+@SuppressWarnings({"WeakerAccess", "unused"})
 public class DieRoller{
     private Random random;
     private ArrayList<Die> lastRoll;
-    private Logger logger;
+    private Logger logger = LoggerFactory.getLogger(DieRoller.class);
     
     public DieRoller(long seed){
         random = new Random(seed);
@@ -44,7 +45,7 @@ public class DieRoller{
     
     public Die rollDice(){
         int roll = abs(random.nextInt()) % 6 + 1;
-        logger.log("Rolled: " + roll, LogLevel.INFO);
+        logger.info("Rolled: " + roll);
         return new Die(roll);
     }
 }
