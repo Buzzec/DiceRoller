@@ -1,6 +1,6 @@
-package com.buzzec;
+package net.buzzec.diceRoller;
 
-import com.buzzec.exceptions.*;
+import net.buzzec.diceRoller.exceptions.InvalidDieSide;
 
 public class Die{
     private int side;

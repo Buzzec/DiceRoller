@@ -1,4 +1,4 @@
-package com.buzzec.exceptions;
+package net.buzzec.diceRoller.exceptions;
 
 public class InvalidDieSide extends  RuntimeException{
     private int side;

@@ -1,4 +1,4 @@
-package com.buzzec.exceptions;
+package net.buzzec.diceRoller.exceptions;
 
 public class InvalidNumDice extends RuntimeException {
     private int num;
